@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Square from './Square'
+import Input from './Input'
 
 function App() {
   const [color, setColor] = useState('white')
@@ -10,16 +12,10 @@ function App() {
   return (
     <>
       <h1>Display Colors</h1>
-      <div
-        className='color-box'
-        style={{ backgroundColor: color }}>
-        <p className='color-box-p'>{color}</p>
-      </div>
-      <input
-        className='color-input'
-        type='text'
-        placeholder={color}
-        onChange={handleColorChange}
+      <Square color={color} />
+      <Input
+        color={color}
+        handleColorChange={handleColorChange}
       />
     </>
   )
