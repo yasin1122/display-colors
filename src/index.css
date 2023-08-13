@@ -18,6 +18,7 @@ body {
 
 /* Heading styles */
 h1 {
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center; /* Ensure text is centered */
 }

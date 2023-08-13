@@ -1,21 +1,18 @@
 import { useState } from 'react'
 import Square from './Square'
 import Input from './Input'
+import Header from './Header'
 
 function App() {
   const [color, setColor] = useState('white')
 
-  const handleColorChange = e => {
-    setColor(e.target.value)
-  }
-
   return (
     <>
-      <h1>Display Colors</h1>
+      <Header />
       <Square color={color} />
       <Input
         color={color}
-        handleColorChange={handleColorChange}
+        setColor={setColor}
       />
     </>
   )
